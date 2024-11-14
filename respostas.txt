@@ -1,0 +1,58 @@
+1. Por quê você escolheu este design e não os demais que estavam disponíveis pra
+escolha? Dica: Esta é uma pergunta subjetiva, e não tem resposta certa ou errada. (1,0
+ponto)
+    * Eu escolhi esse design por sentir mais confortável com a estrutura do site,
+    olhando os outros exemplos do nível 1 eu não me senti conrotável para fazê-los.
+    Diante disso, a melhor escolha foi a do Oh-Studio.
+2.   Quais fontes de informação você usou para chegar na sua solução (vale código
+disponível no github, tutoriais, google, chatgpt)? (1,0 ponto)
+    * As fontes de informação foi basicamente especionar o site exemplo e verificando a estrutura uma por uma,
+    quando eu tinha alguma dificuldade pedia para o chat elaborar a melhor maneira de montar a estrutura para solucionar meu problema.
+    Não verifiquei a fundo a existencia de códigos do site. Além disso, pesquisei no google algumas definições para elaborar o CSS do site.
+3.  Quais as dificuldades que você teve para imitar o design original? Enumere com
+exemplos reais de código. (1,0 ponto)
+    As principais dificuldades existentes foram na hora de elaborar a estrutura de design,
+    um exemplo que demorei para acertar foi a classe do corpo, onde tem a maior parte do site.
+   
+    header .corpo {
+        align-content: center; /* Centraliza o conteúdo dentro do contêiner */
+        align-items: center; /* Centraliza os itens no centro verticalmente */
+        display: flex; /* Define o layout flexível para o contêiner */
+        flex: none; /* Impede que o contêiner se expanda ou contraia */
+        flex-direction: column; /* Organiza os itens em uma coluna */
+        flex-wrap: nowrap; /* Impede a quebra de linha dos itens */
+        gap: 0px; /* Define o espaçamento entre os itens como 0 pixels */
+        height: min-content; /* Define a altura para ocupar o mínimo de espaço necessário */
+        justify-content: flex-start; /* Alinha os itens no início do eixo principal */
+        overflow: hidden; /* Oculta o conteúdo que excede o contêiner */
+        padding: 0; /* Remove o preenchimento interno do contêiner */
+        position: relative; /* Define a posição relativa para possibilitar posicionamento absoluto dos filhos */
+        width: 100%; /* Define a largura para ocupar 100% do contêiner pai */
+    }
+
+    a dificuldade foi acertar exatamente o posicionamento dos filhos dessa classe, colocar todos centralizado.
+    Adicionalmente, os filhos também tinham uma estrutura especifica para seguir, organizando de uma forma que 
+    não destoasse muito do site Oh-studio.
+    Outra dificuldade foi na hora de deixar o site responsivo em várias telas, mesmo não sendo algo necessário eu achei
+    que seria interessante ter essa propriedade no clone, visto que o Oh-studio apresenta essa caracteristica. 
+    Por fim, a estrutura do info deu um trabalho para deixar parecido com o que tinha no site escolhido, pois tinha muitas
+    caractteristicas nesse componente, como visto no código abaixo:
+    .info {
+        height: 100%; /* Define a altura para ocupar 100% do contêiner */
+        width: 100%; /* Define a largura para ocupar 100% do contêiner */
+        position: absolute; /* Posiciona o elemento de forma absoluta sobre a imagem */
+        top: 0; /* Alinha ao topo do contêiner pai */
+        left: 0; /* Alinha à esquerda do contêiner pai */
+        display: flex; /* Define layout flexível para o conteúdo interno */
+        justify-content: space-between; /* Distribui o conteúdo entre os lados esquerdo e direito */
+        align-items: top; /* Alinha o conteúdo ao topo */
+        padding: 20px; /* Define preenchimento interno de 20 pixels */
+        color: #fff; /* Define a cor do texto como branco */
+        background-color: rgba(0,0,0,0.5); /* Define uma cor de fundo com opacidade */
+        opacity: 0; /* Torna o elemento transparente por padrão */
+        transition: opacity 0.3s ease; /* Anima a opacidade na transição de hover */
+        backdrop-filter: blur(8px); /* Aplica um desfoque no fundo */
+        font-size: 18px; /* Define o tamanho da fonte */
+        font-weight: 500; /* Define o peso da fonte */
+    }
+    

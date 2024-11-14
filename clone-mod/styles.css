@@ -1,0 +1,339 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão como Arial, com alternativas se não estiver disponível */
+    background-color: #1C1C1C; /* Define a cor de fundo  */
+    color: #F5F5F5; /* Define a cor do texto */
+    margin: 0; /* Remove as margens padrão da página */
+    padding: 0; /* Remove o preenchimento padrão da página */
+    display: flex; /* Configura a página para usar o layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    flex-direction: column; /* Empilha os elementos verticalmente em uma coluna */
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+  }
+  
+  header {
+    text-align: center; /* Centraliza o texto dentro do header */
+  }
+  .section {
+    height: 90px; /* Define a altura da seção como 90 pixels */
+    width: 100%; /* Define a largura da seção para ocupar 100% do contêiner pai */
+  }
+  header .corpo {
+    align-content: center; /* Centraliza o conteúdo dentro do contêiner */
+    align-items: center; /* Centraliza os itens no centro verticalmente */
+    display: flex; /* Define o layout flexível para o contêiner */
+    flex: none; /* Impede que o contêiner se expanda ou contraia */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    flex-wrap: nowrap; /* Impede a quebra de linha dos itens */
+    gap: 0px; /* Define o espaçamento entre os itens como 0 pixels */
+    height: min-content; /* Define a altura para ocupar o mínimo de espaço necessário */
+    justify-content: flex-start; /* Alinha os itens no início do eixo principal */
+    overflow: hidden; /* Oculta o conteúdo que excede o contêiner */
+    padding: 0; /* Remove o preenchimento interno do contêiner */
+    position: relative; /* Define a posição relativa para possibilitar posicionamento absoluto dos filhos */
+    width: 100%; /* Define a largura para ocupar 100% do contêiner pai */
+  }
+  
+  .corpo-h1 {
+    display: flex; /* Define o layout flexível para o contêiner */
+    align-items: center; /* Centraliza os itens no centro verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    width: 100%; /* Define a largura para ocupar 100% do contêiner pai */
+    height: 40vh; /* Define a altura como 40% da altura da janela de visualização */
+    overflow: visible; /* Permite que o conteúdo exceda o contêiner */
+    padding: 0px; /* Remove o preenchimento interno do contêiner */
+  }
+  .texto {
+    max-width: 700px; /* Define a largura máxima como 700 pixels */
+    position: relative; /* Define a posição relativa para permitir o posicionamento absoluto dos filhos */
+    h1 {
+      font-size: 72px; /* Define o tamanho da fonte como 72 pixels */
+      font-style: normal; /* Define o estilo da fonte como normal */
+      font-weight: 500; /* Define a espessura da fonte como média */
+      line-height: 1.2; /* Define o espaçamento entre linhas como 1.2 */
+      text-align: center; /* Centraliza o texto */
+    }
+  }
+  
+  .navbar {
+    position: fixed; /* Fixa a navbar no lugar ao rolar a página */
+    top: 0; /* Alinha a navbar ao topo da página */
+    left: 50%; /* Centraliza horizontalmente a navbar */
+    transform: translateX(
+      -50%
+    ); /* Ajusta a posição para realmente centralizar a navbar */
+    display: flex; /* Usa o layout flexível para alinhar os links horizontalmente */
+    gap: 0px; /* Define o espaçamento entre os itens como 0 pixels */
+    background-color: rgba(232, 229, 228, 0.5); /* Define a cor de fundo com opacidade */
+    backdrop-filter: blur(16px); /* Aplica um efeito de desfoque ao fundo */
+    padding: 4px; /* Define o preenchimento interno para a navbar */
+    border-radius: 100px; /* Arredonda as bordas da navbar */
+    opacity: 1; /* Define a opacidade total para a navbar */
+    z-index: 10; /* Coloca a navbar acima de outros elementos */
+    margin-top: 20px; /* Adiciona uma margem superior de 20 pixels */
+  }
+  
+  .navbar a {
+    color: #000; /* Define a cor do texto dos links*/
+    text-decoration: none; /* Remove a linha de sublinhado dos links */
+    padding: 10px 25px; /* Define o preenchimento interno dos links */
+    width: auto; /* Define a largura automaticamente */
+    border-radius: 100px; /* Arredonda as bordas dos links */
+    opacity: 1; /* Define a opacidade total para os links */
+    display: inline-block; /* Permite definir altura e largura nos links */
+    text-align: center; /* Centraliza o texto nos links */
+    transition: background-color 0.3s, color 0.3s; /* Anima a mudança de cor e de fundo */
+    font-size: 14px; /* Define o tamanho da fonte como 14 pixels */
+  }
+  
+  .navbar a:first-child {
+    background-color: var(
+      --token-1fc33387-132e-4e93-8c56-ca86d526816b,
+      rgb(255, 255, 255)
+    ); /* Define a cor de fundo do primeiro link */
+  }
+  
+  .tags span {
+    background-color: #4B4B4B80; /* Define uma cor de fundo com opacidade */
+    padding: 5px 10px; /* Define o preenchimento interno dos spans */
+    margin: 5px; /* Adiciona margem ao redor dos spans */
+    margin-top: 50px; /* Adiciona uma margem superior de 50 pixels */
+    border-radius: 20px; /* Arredonda as bordas dos spans */
+    color: #A9A9A9; /* Define a cor do texto como cinza */
+    font-size: 0.9rem; /* Define o tamanho da fonte como 0.9rem */
+  }
+  
+  .tags span:first-child {
+    background-color: transparent; /* Define o fundo do primeiro span como transparente */
+  }
+  
+  /* Galeria de Imagens */
+  
+  .gallery {
+    display: grid; /* Define o layout em grid para organizar as imagens */
+    grid-template-columns: 1fr; /* Define uma coluna que ocupa o espaço total */
+    margin-top: 90px; /* Adiciona uma margem superior de 90 pixels */
+    justify-items: center; /* Centraliza os itens na coluna */
+  }
+  
+  .image {
+    position: relative; /* Define posição relativa para elementos posicionados dentro */
+    border-radius: 15px; /* Arredonda as bordas da imagem */
+    overflow: hidden; /* Oculta o conteúdo que excede as bordas arredondadas */
+    width: 650px; /* Define a largura da imagem */
+    height: 500px; /* Define a altura da imagem */
+    display: block; /* Define a imagem como um bloco */
+  }
+  
+  .info {
+    height: 100%; /* Define a altura para ocupar 100% do contêiner */
+    width: 100%; /* Define a largura para ocupar 100% do contêiner */
+    position: absolute; /* Posiciona o elemento de forma absoluta sobre a imagem */
+    top: 0; /* Alinha ao topo do contêiner pai */
+    left: 0; /* Alinha à esquerda do contêiner pai */
+    display: flex; /* Define layout flexível para o conteúdo interno */
+    justify-content: space-between; /* Distribui o conteúdo entre os lados esquerdo e direito */
+    align-items: top; /* Alinha o conteúdo ao topo */
+    padding: 20px; /* Define preenchimento interno de 20 pixels */
+    color: #A9A9A9; /* Define a cor do texto como branco */
+    background-color: rgba(0,0,0,0.5); /* Define uma cor de fundo com opacidade */
+    opacity: 0; /* Torna o elemento transparente por padrão */
+    transition: opacity 0.3s ease; /* Anima a opacidade na transição de hover */
+    backdrop-filter: blur(8px); /* Aplica um desfoque no fundo */
+    font-size: 18px; /* Define o tamanho da fonte */
+    font-weight: 500; /* Define o peso da fonte */
+  }
+  
+  .info h3 {
+    font-size: 24px; /* Define o tamanho da fonte para o título */
+    font-weight: 300; /* Define peso da fonte leve */
+    margin-left: 30px; /* Adiciona margem à esquerda */
+    margin-top: 40px; /* Adiciona margem no topo */
+  }
+  
+  .image:hover .info {
+    opacity: 1; /* Torna o elemento visível ao passar o mouse sobre a imagem */
+  }
+  
+  .info .icon {
+    font-size: 24px; /* Define o tamanho da fonte do ícone */
+    background-color: #A9A9A9; /* Define cor de fundo branca para o ícone */
+    width: 20px; /* Define largura do ícone */
+    height: 20px; /* Define altura do ícone */
+    display: flex; /* Usa layout flexível para o ícone */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    border-radius: 100%; /* Torna o ícone completamente arredondado */
+    padding: 20px; /* Adiciona preenchimento ao ícone */
+    margin-right: 60px; /* Adiciona margem à direita */
+    margin-top: 30px; /* Adiciona margem no topo */
+    color: black; /* Define a cor do ícone como preto */
+  }
+  
+  .image img {
+    position: absolute; /* Define a imagem como absoluta para ocupar o contêiner */
+    border-radius: inherit; /* Herda o arredondamento do contêiner pai */
+    inset: 0; /* Preenche o contêiner pai */
+    width: 100%; /* Define largura como 100% do contêiner */
+    height: 100%; /* Define altura como 100% do contêiner */
+    object-position: center center; /* Centraliza o objeto */
+    object-fit: cover; /* Cobre o contêiner sem distorção */
+    image-rendering: auto; /* Define a qualidade de renderização da imagem */
+  }
+  
+  .image-container {
+    align-content: flex-start; /* Alinha o conteúdo no início */
+    align-items: flex-start; /* Alinha itens no topo */
+    display: flex; /* Define layout flexível para organizar as imagens */
+    flex: none; /* Impede a expansão ou contração do contêiner */
+    flex-direction: row; /* Organiza as imagens em uma linha */
+    flex-wrap: nowrap; /* Impede a quebra de linha dos itens */
+    gap: 20px; /* Define o espaçamento entre as imagens */
+    margin-top: 40px; /* Adiciona uma margem superior */
+    height: min-content; /* Define a altura mínima necessária */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    max-width: 1400px; /* Define a largura máxima do contêiner */
+    overflow: hidden; /* Oculta o conteúdo excedente */
+    position: relative; /* Define posição relativa para controle dos filhos */
+    width: 100%; /* Define a largura do contêiner */
+  }
+  
+  .image:hover img {
+    filter: blur(8px); /* Aplica desfoque à imagem ao passar o mouse */
+    transition: 0.5s; /* Define a transição do desfoque */
+  }
+  
+  .image:hover::before {
+    position: absolute; /* Define a posição como absoluta para ser ajustada dentro do contêiner */
+    top: 10px; /* Define a distância do topo */
+    right: 10px; /* Define a distância da borda direita */
+    font-size: 1.5em; /* Define o tamanho da fonte para o ícone ou texto */
+    color: white; /* Define a cor do texto como branco */
+    background-color: rgba(0, 0, 0, 0.5); /* Define fundo semitransparente */
+    border-radius: 50%; /* Arredonda completamente as bordas para um círculo */
+    width: 35px; /* Define a largura do círculo */
+    height: 35px; /* Define a altura do círculo */
+    display: flex; /* Usa layout flexível para centralizar o conteúdo */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  }
+  
+  /* Estilo para a seção de chamada para ação */
+  .call-to-action {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 90px; /* Adiciona uma margem superior de 90 pixels */
+    margin-bottom: 80px; /* Adiciona uma margem inferior de 80 pixels */
+    padding: 50px 0; /* Adiciona 50 pixels de preenchimento superior e inferior */
+    font-size: 14px; /* Define o tamanho da fonte */
+  }
+  
+  .cta-text {
+    font-size: 30px; /* Define o tamanho da fonte maior para o texto principal */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    color: #A9A9A9; /* Define a cor do texto como preto */
+    margin: 0; /* Remove todas as margens */
+  }
+  
+  .cta-subtext {
+    font-size: 30px; /* Define o tamanho da fonte do subtítulo */
+    color: #A9A9A9; /* Define uma cor cinza para o subtítulo */
+    margin: 5px 0 0 0; /* Adiciona margem superior de 5 pixels, removendo margens laterais e inferior */
+    transition: color 0.3s ease, transform 0.3s ease; /* Aplica uma transição suave nas propriedades de cor e transformação */
+  }
+  
+  .cta-subtext:hover {
+    color: #d2d2d2; /* Cor ao passar o mouse */
+    cursor: pointer; /* Muda o cursor para pointer */
+  }
+  
+  /* Estilos básicos para o footer */
+  .footer {
+    width: 100%; /* Define a largura total da área do rodapé */
+    opacity: 1; /* Define a opacidade total para o rodapé */
+    place-content: center; /* Centraliza o conteúdo do rodapé */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    display: flex; /* Usa display flexível para organizar os itens */
+    flex-flow: row; /* Define a direção do layout flex como uma linha */
+    height: min-content; /* Define a altura mínima necessária para o conteúdo */
+    overflow: visible; /* Permite que o conteúdo transborde se necessário */
+    padding: 40px; /* Adiciona 40 pixels de padding ao redor do rodapé */
+    position: relative; /* Define a posição como relativa para ajustes */
+  }
+  
+  .footer-div {
+    place-content: center space-between; /* Centraliza e distribui o conteúdo com espaço entre os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    display: flex; /* Usa display flex para organizar os itens */
+    flex: 1 0 0px; /* Permite que o item cresça, mas não encolha e define a base de 0px */
+    flex-flow: row; /* Define a direção do layout flex como uma linha */
+    height: 17px; /* Define uma altura fixa de 17 pixels */
+    max-width: 1400px; /* Define a largura máxima do conteúdo do rodapé */
+    overflow: visible; /* Permite que o conteúdo transborde se necessário */
+    color: #A9A9A9;
+}
+  
+  .footer-links a {
+    color: #A9A9A980; /* Define a cor do texto dos links como preto */
+    margin-left: 15px; /* Adiciona uma margem à esquerda para espaçar os links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+  }
+  
+  .footer-links a:hover {
+    color: #7f7f7f; /* Muda a cor do link para cinza ao passar o mouse */
+  }
+  
+  /* Media query para telas menores (footer com estilo de coluna) */
+  @media (max-width: 819px) {
+    /* Estilos para telas com largura máxima de 819px */
+  
+    .image-container {
+      display: flex; /* Define display como flexível */
+      flex-direction: column; /* Organiza as imagens em uma coluna */
+      margin-top: 20px; /* Adiciona margem superior de 20px */
+    }
+  
+    .image {
+      width: 675px; /* Define a largura das imagens para 675px */
+    }
+  
+    .image:hover img {
+      filter: none; /* Remove o filtro de desfoque ao passar o mouse */
+      transition: none; /* Remove a transição de desfoque */
+    }
+  
+    .footer {
+      flex-direction: column; /* Organiza o rodapé em coluna */
+      justify-content: flex-start; /* Alinha os itens ao topo do rodapé */
+      padding: 40px 40px 80px; /* Define o padding do rodapé */
+    }
+  
+    .footer-div {
+      flex: 0 0 auto; /* Impede que o footer div cresça ou encolha */
+      flex-direction: column; /* Organiza o conteúdo do footer div em coluna */
+      gap: 10px; /* Adiciona um espaço de 10px entre os itens */
+      height: min-content; /* Define a altura mínima necessária */
+      justify-content: center; /* Centraliza o conteúdo */
+      order: 0; /* Define a ordem dos itens */
+      width: 100%; /* Define a largura do footer div como 100% */
+    }
+  
+    .texto {
+      max-width: 650px; /* Limita a largura máxima do texto a 650px */
+    }
+  
+    .texto h1 {
+      font-size: 36px; /* Ajusta o tamanho da fonte do título para 36px */
+    }
+  
+    .tags {
+      display: none; /* Oculta as tags em telas menores */
+    }
+  
+    .image:hover .info {
+      opacity: 0; /* Define a opacidade como 0 (invisível) ao passar o mouse sobre a imagem */
+    }
+  }
+  
